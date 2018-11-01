@@ -3,17 +3,106 @@
 
 <head>
     <meta charset="8-utf">
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
-    <title> Kollywood Movies </title>
+    <title>Ozziewood Movies</title>
     <link rel=stylesheet href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 </head>
 
 <body>
-    <div class="header" id="header">
-        <i id="backButton" class="back-btn"><span class="fas fa-angle-left"></span></i>
-        <h1 class="page-title" id="page-title"> Latest Movies</h1>
+
+
+    <header class="header" id="header">
+        <a href="#" id="backButton" class="back-button"><i class="fas fa-angle-left"></i></a>
+        <h1 class="page-title" id="page-title">Ozziewood Movies</h1>
+        <a href="#" id="filterBar" class="filter-button"><i class="fas fa-filter"></i></a>
+        <a href="#" id="searchBar" class="search-button"><i class="fas fa-search"></i></a>
+    </header>
+
+    <div class="filters is-hidden" id="searchBarPane">
+        <div class="filters-section">
+            <h3 class="filters-section-title">Language</h3>
+            <div class="column">
+
+                <label class="language-checkbox">
+                    <input class="checkbox" type="checkbox" id="languageTamil" value="Tamil">
+                    <span class="language">Tamil</span>
+                </label>
+
+                <label class="language-checkbox">
+                    <input class="checkbox" type="checkbox" id="languageMarathi" value="Marathi">
+                    <span class="language">Marathi</span>
+                </label>
+
+                <label class="language-checkbox">
+                    <input class="checkbox" type="checkbox" id="languageMalayalam" value="Malayalam">
+                    <span class="language">Malayalam</span>
+                </label>
+
+            </div>
+
+            <div class="column">
+
+                <label class="language-checkbox">
+                    <input class="checkbox" type="checkbox" id="languageTelugu" value="Telugu">
+                    <span class="language">Telugu</span>
+                </label>
+
+                <label class="language-checkbox">
+                    <input class="checkbox" type="checkbox" id="languageKannada" value="Kannada">
+                    <span class="language">Kannada</span>
+                </label>
+
+                <label class="language-checkbox">
+                    <input class="checkbox" type="checkbox" id="languageHindi" value="Hindi">
+                    <span class="language">Hindi</span>
+                </label>
+
+            </div>
+        </div>
+
+        <div class="filters-section">
+            <h3 class="filters-section-title">Location</h3>
+
+            <div class="column">
+                <label class="city-checkbox">
+                    <input class="checkbox" type="checkbox" id="locationACT" value="ACT">
+                    <span class="city">ACT</span>
+                </label>
+                <label class="city-checkbox">
+                    <input class="checkbox" type="checkbox" id="locationNSW" value="NSW">
+                    <span class="city">NSW</span>
+                </label>
+                <label class="city-checkbox">
+                    <input class="checkbox" type="checkbox" id="locationVIC" value="VIC">
+                    <span class="city">VIC</span>
+                </label>
+            </div>
+            <div class="column">
+                <label class="city-checkbox">
+                    <input class="checkbox" type="checkbox" id="locationNT" value="NT">
+                    <span class="city">NT</span>
+                </label>
+                <label class="city-checkbox">
+                    <input class="checkbox" type="checkbox" id="locationSA" value="SA">
+                    <span class="city">SA</span>
+                </label>
+                <label class="city-checkbox">
+                    <input class="checkbox" type="checkbox" id="locationTAS" value="TAS">
+                    <span class="city">TAS</span>
+                </label>
+            </div>
+        </div>
+        <button class="button save" id="searchSaveButton">Apply</button>
+        <button class="button delete" id="searchCancelButton">Reset</button>
     </div>
+
+    <div class="search is-hidden" id="searchBarTextBox">
+        <input class="search-box" type="text" value="" id="searchText">
+        <i class="fas fa-search search-icon"></i>
+    </div>
+
     <section class="movies" id="movies"></section>
     <script src="scripts/main.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7"

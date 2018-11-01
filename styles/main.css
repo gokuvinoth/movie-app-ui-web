@@ -21,22 +21,20 @@ body {
   display: none;
 }
 
-.filter,
-.search {
+.filter-button,
+.search-button {
   color: #d3a9ff;
   font-size: 1em;
   margin-top: 1em;
   padding-top: 0.5em;
 }
 
-.filter {
+.filter-button {
   flex: 1;
-  padding-right: 1em;
 }
 
-.search {
+.search-button {
   flex: 1;
-  padding-right: 1em;
 }
 
 .page-title {
@@ -49,28 +47,32 @@ body {
   padding: 0.6em;
 }
 
-.search-bar {
-  border: 1px solid white;
+.filters {
+  background-image: linear-gradient(0deg, #d3a9ff -9%, #6b29ab);
   border-radius: 0.3em;
-  margin: 1em;
+  margin: 0 1em 1em 1em;
+  padding: 1em;
 }
 
-.search-bar-off {
+.is-hidden {
   display: none;
 }
 
-.search-bar-language,
-.search-bar-city {
-  color: #d3a9ff;
-  padding: 0.75em;
-  font-weight: bold;
+.filters-section-title {
+  color: #fff;
+  font-size: 0.875rem;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.filters-section {
+  margin-bottom: 2em;
 }
 
 .language-checkbox,
 .city-checkbox {
   flex: 1;
   color: white;
-  padding: 0.5em;
 }
 
 .column {
@@ -86,35 +88,39 @@ body {
   font-size: 0.72em;
 }
 
-.save,
-.delete {
+.button {
   border: none;
   display: inline-block;
-  margin: 0.75em;
   border-radius: 0.5em;
-  padding: 0.35em;
+  padding: 0.5em 1em;
+}
+.save {
   background-color: #8547c4;
   color: white;
 }
 
-.search-field {
-  margin-left: 1em;
+.delete {
+  color: white;
+  background-color: transparent;
+}
+
+.search {
+  position: relative;
+  margin: 0 1em;
 }
 
 .search-box {
   color: darkgray;
-  padding-left: 1em;
+  padding: 0.5em;
+  width: 100%;
 }
 
 .search-icon {
-  position: relative;
-  right: 1.5em;
+  position: absolute;
+  right: 1em;
+  top: 1em;
   font-size: 0.75em;
   color: darkgrey;
-}
-
-.search-field-off {
-  display: none;
 }
 
 .movie-list {
